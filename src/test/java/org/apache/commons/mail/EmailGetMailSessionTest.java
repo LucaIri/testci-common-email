@@ -49,7 +49,7 @@ public class EmailGetMailSessionTest {
 		bounceaddress = "steve";
 		email.setBounceAddress(bounceaddress);
 		this.session1 = null;
-		prop.setProperty("123", "Jump");
+		this.prop.setProperty("123", "Jump");
 		session2.getInstance(prop);
 		email.getMailSession();
 	}
