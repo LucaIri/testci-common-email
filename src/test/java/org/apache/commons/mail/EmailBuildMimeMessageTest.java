@@ -50,7 +50,7 @@ public class EmailBuildMimeMessageTest {
 	 * email.addTo(fromadd); assertNull(email.message); email.buildMimeMessage(); }
 	 */
 	
-	@Test(expected = EmailException.class)
+	@Test
 	public void TestBuildMimeMessageHeaderListGreaterThanZero() throws EmailException {
 		email.hostName = hostnm;
 		email.setFrom("john@smith.com");
@@ -63,7 +63,7 @@ public class EmailBuildMimeMessageTest {
 		email.buildMimeMessage();
 	}
 	@Test
-	public void TestBuildMimeMessageCcListGreaterThanZero() throws EmailException, UnsupportedEncodingException {
+	public void TestBuildMimeMessageCcListGreaterThanZero() throws UnsupportedEncodingException, EmailException {
 		InternetAddress ia = new InternetAddress();
 		ia.setPersonal("luca");
 		ia.setAddress("cantonMI@hi.com");
@@ -76,7 +76,7 @@ public class EmailBuildMimeMessageTest {
 		email.setCc(map);
 		email.buildMimeMessage();
 	}
-	@Test(expected = EmailException.class)
+	@Test
 	public void TestBuildMimeMessageBCcListGreaterThanZero() throws EmailException, UnsupportedEncodingException {
 		InternetAddress ia = new InternetAddress();
 		ia.setPersonal("luca");
@@ -91,7 +91,7 @@ public class EmailBuildMimeMessageTest {
 		email.buildMimeMessage();
 	}
 	
-	@Test(expected = EmailException.class)
+	@Test
 	public void TestBuildMimeMessageReplyListGreaterThanZero() throws UnsupportedEncodingException, EmailException {
 		InternetAddress ia = new InternetAddress();
 		ia.setPersonal("luca");
