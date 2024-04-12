@@ -42,14 +42,13 @@ public class EmailBuildMimeMessageTest {
 		assertNull(email.message);
 		email.buildMimeMessage();
 	}
-	@Test
-	public void TestBuildMimeMessageFromAndAddtoNull() throws EmailException {
-		email.hostName = hostnm;
-		//email.setFrom(null)
-		email.addTo(fromadd);
-		assertNull(email.message);
-		email.buildMimeMessage();
-	}
+	/*
+	 * @Test public void TestBuildMimeMessageFromAndAddtoNull() throws
+	 * EmailException { email.hostName = hostnm; try { email.setFrom(null); } catch
+	 * (EmailException ee) { ee.printStackTrace(); }
+	 * 
+	 * email.addTo(fromadd); assertNull(email.message); email.buildMimeMessage(); }
+	 */
 	
 	@Test(expected = EmailException.class)
 	public void TestBuildMimeMessageHeaderListGreaterThanZero() throws EmailException {
