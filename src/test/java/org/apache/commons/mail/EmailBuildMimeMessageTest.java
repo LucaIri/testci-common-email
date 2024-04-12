@@ -37,7 +37,7 @@ public class EmailBuildMimeMessageTest {
 	@Test
 	public void TestBuildMimeMessageFromAndAddtoNotNull() throws EmailException {
 		email.hostName = hostnm;
-		email.setFrom("john@smith.com");
+		email.setFrom("johnsmith@gmail.com");
 		email.addTo(fromadd);
 		assertNull(email.message);
 		email.buildMimeMessage();
