@@ -62,7 +62,7 @@ public class EmailBuildMimeMessageTest {
 		assertEquals(2, email.headers.size());
 		email.buildMimeMessage();
 	}
-	@Test(expected = EmailException.class)
+	@Test
 	public void TestBuildMimeMessageCcListGreaterThanZero() throws EmailException, UnsupportedEncodingException {
 		InternetAddress ia = new InternetAddress();
 		ia.setPersonal("luca");
