@@ -18,7 +18,7 @@ public class EmailGetMailSessionTest {
 	private Properties prop;
 	private String smtpPort;
 	private Authenticator authenticator;
-	private String hostname;
+	private String hostname = "Johnsmith";
 	private String bounceaddress;
 	private int socketTimeout = EmailConstants.SOCKET_TIMEOUT_MS;
 
@@ -62,6 +62,7 @@ public class EmailGetMailSessionTest {
 	@Test
 	public void testGetMailSessionSSLOnConnect() throws EmailException {
 		email.setSSLOnConnect(true);
+		email.setHostName(hostname);
 		email.getMailSession();
 	}
 }
